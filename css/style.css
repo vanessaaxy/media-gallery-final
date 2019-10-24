@@ -1,4 +1,4 @@
-:root {/*-- Sets color variables --*/
+:root {
   --prime: #222;
   --text: #333;
   --rev-text: #EEE;
@@ -16,27 +16,27 @@ i.fas {
   padding: 0 .33em;
 }
 
-/*nav styles-*/
+/*nav styles*/
 .topnav {
   margin-top: -.25rem;
-  padding-bottom: .5rem; /*-- creates a little space below nav --*/
+  padding-bottom: .5rem;
   background-color: #30343F;
-  display: flex; /*-- creates a flex container --*/
-  flex-direction: column; /*-- direction is for MOBILE screen sizes --*/
-  justify-content: space-around; /*-- lays out menu items--*/
-  align-content: center; /*-- vertically aligns menu items to center --*/
-  position: fixed; /*-- makes the navbar stay at the top, even when scrolling--*/
-  z-index: 1000; /*-- makes navbar always sit on top--*/
-  width: 100%; /*-- makes navbar occupy full width of the page --*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
 nav a {
-  position: relative; /*-- overcomes negative margin in above rule --*/
-  top: 4px; /*-- tweaks vertical position --*/
-  text-align: center; /*-- center-aligns all text inside their boxes --*/
-  padding: .75em; /*-- provides padding inside menu items --*/
-  margin: auto 0; /*-- centers menu text vertically --*/
+  position: relative;
+  top: 4px;
+  text-align: center;
+  padding: .75em;
+  margin: auto 0;
   color: var(--rev-text);
-  transition: color 250ms ease-in-out; /*-- specifies transition, duration, and easing --*/
+  transition: color 250ms ease-in-out;
   text-decoration: none;
 }
 nav a:hover {
@@ -51,148 +51,147 @@ nav a.trigram {
   text-decoration: none;
   font-size: 2rem;
 }
-/*-- Mobile Nav Queries --*/
+/*Mobile Nav*/
 @media screen and (max-width: 767px) {
   .topnav a, .topnav span {display: none;}
   .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
 }
 
 @media screen and (max-width: 767px) {
-  .topnav.responsive {align-items: center;} /*-- vertically centers--*/
-  .topnav.responsive a, .topnav.responsive span {display:inherit;} /*-- makes menu items visible --*/
-  .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
-  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
-  .topnav.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
-  .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
-  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+  .topnav.responsive {align-items: center;}
+  .topnav.responsive a, .topnav.responsive span {display:inherit;}
+  .topnav.responsive a:first-child {margin-top:1em;}
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .topnav.responsive a.more {margin-bottom: 1em;}
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;}
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
 }
 
 @media screen and (min-width: 768px) {
   .topnav {display: flex; flex-direction: row; justify-content: space-around;}
 }
-/*-- Styles for slideshow --*/
+/*slideshow styles*/
 .slideshow {
   background-color: #f2f2f2;
   padding: 1em;
 }
 .slideshow-wrapper {
-  position: relative; /*-- this allows children to be position absolutely --*/
-  margin: auto; /*-- simple centering method--*/
-  margin-top: 2em; /*-- adds space above--*/
-  max-width: 1440px; /*-- contrains slideshow on largest screens --*/
+  position: relative;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 1440px;
 }
 .slideshow-wrapper img {
-  width: 100%; /*-- makes slideshow responsive in size --*/
+  width: 100%;
 }
 .prev, .next {
-  cursor: pointer; /*-- changes hover cursor to the hand --*/
-  position: absolute; /*-- positions arrows absolutely--*/
-  top: 50%; /*-- positions arrows half the height of parent from top --*/
-  width: auto; /*-- matches width of parent --*/
-  padding: 16px; /*-- adds a little bit of space--*/
-  margin-top: -22px; /*-- adjusts position by height of arrows --*/
-  color: white; /*-- sets color for contrast --*/
-  font-weight: bold; /*-- selects heavier font --*/
-  font-size: 18px; /*-- sets arrow font size --*/
-  transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
-  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none; /*-- prevents users from selecting buttons --*/
+  user-select: none;
 }
 .next {
-  right: 0; /*-- positions next arrow hard right --*/
-  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
+  background-color: rgba(0,0,0,0.8);
 }
 .text-center {
-  text-align: center; /*-- aligns indicators center --*/
+  text-align: center;
 }
 .captiontext {
-  background: rgba(0,0,0,0.4); /*-- transparent black background --*/
-  color: #f2f2f2; /*-- sets color to almost white --*/
-  font-size: 22px; /*-- sets font size --*/
-  padding: 8px 12px; /*-- sets caption padding --*/
-  position: absolute; /*-- positions caption text absolutely--*/
-  bottom: 8px; /*-- sets position 8px from bottom --*/
-  width: 100%; /*-- sets width equal to container width --*/
-  text-align: center; /*-- aligns text center --*/
+  background: rgba(0,0,0,0.4);
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .indicator {
-  cursor:pointer; /*-- changes hover cursor to the hand --*/
-  height: auto; /*-- sets height of pics --*/
-  width: 24%; /*-- sets width of pics --*/
-  margin: 0 2px; /*-- adds margin between pics --*/
-  background-color: #bbb; /*-- sets background color to light gray --*/
-  display: inline-block; /*-- displays in a horizontal line --*/
-  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  cursor:pointer;
+  height: auto;
+  width: 24%;
+  margin: 0 2px;
+  background-color: #CCC;
+  display: inline-block;
+  transition: all 250ms ease-in-out;
   opacity: .5;
 }
 .indicator img {
-  width: 100% !important; /*-- small images fill available space --*/
+  width: 100% !important;
 }
 .active, .indicator:hover {
-  opacity: 1; /*-- makes fully visible when hovered  --*/
+  opacity: 1;
 }
-/* Fading animation */
 .fade {
-  -webkit-animation-name: fade; /*-- webkit prefix  --*/
-  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
-  animation-name: fade; /*-- defines which animation to use --*/
-  animation-duration: 1.5s; /*-- sets the duration --*/
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
-@-webkit-keyframes fade { /*-- webkit prefix --*/
+@-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-@keyframes fade { /*-- sets "fade" animation properties --*/
-  from {opacity: .4} /*-- sets start of animation --*/
-  to {opacity: 1} /*-- sets end of animation --*/
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
-/* On smaller screens, hides slideshow */
+
 @media only screen and (max-width: 767px) {
   .slideshow {display: none;}
 }
-/*-- ----------
-- GRID STYLES -
----------------*/
+
+/*article styles*/
 .main-grid {
-  margin-top: 3.5rem; /*-- adds space above grid wrap --*/
-  padding: .5rem; /*-- adds padding inside grid wrap --*/
-  display: grid; /*-- sets display mode --*/
-  grid-gap: 1.5rem; /*-- creates gutters --*/
-  grid-template-columns: 1fr; /*-- default mobile layout is 1-column--*/
+  margin-top: 3.5rem;
+  padding: .5rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
-/*-- grid media queries--*/
-@media screen and (min-width: 550px) { /*-- at screens between 550 and 767 --*/
-  .main-grid {grid-template-columns: repeat(2, 1fr);}  /*-- 2 columnns --*/
+
+@media screen and (min-width: 550px) {
+  .main-grid {grid-template-columns: repeat(2, 1fr);}
 }
-@media screen and (min-width: 768px) {/*-- at screens between 768 and 989 --*/
-  .main-grid {grid-template-columns: repeat(3, 1fr);} /*-- 3 columnns --*/
+@media screen and (min-width: 768px) {
+  .main-grid {grid-template-columns: repeat(3, 1fr);}
 }
-@media screen and (min-width: 990px) {/*-- at screens between 990 and 1271 --*/
-  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+@media screen and (min-width: 990px) {
+  .main-grid {grid-template-columns: repeat(4, 1fr);}
 }
-@media screen and (min-width: 1280px) {/*-- at screens 1280 and above --*/
-  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+@media screen and (min-width: 1280px) {
+  .main-grid {grid-template-columns: repeat(4, 1fr);}
 }
-/*-- media card styles -- */
+
+
 .main-grid-item {
-  border-radius: 4px;  /*-- rounds borders --*/
-  padding: .5em; /*-- adds space inside --*/
-  background-color: var(--bg);
+  border-radius: 4px;
+  padding: .5em;
+  background-color: #f2f2f2;
 }
 .thumb {
-  padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
-  background-size: cover; /*--sets image to cover background --*/
-  background-position: center center; /*-- positions image horiz. and vert. center --*/
-  border-radius: 4px 4px 0 0; /*-- rounds top-left and top-right edges --*/
+  padding-bottom: 56%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
 }
-/*-- Card Backgrounds --*/
+
 .one .thumb{background-image: url('../img/nyu.jpg');}
 .two .thumb{background-image: url('../img/deer.jpg');}
 .three .thumb{background-image: url('../img/zion2.jpg');}
@@ -205,24 +204,23 @@ nav a.trigram {
 .ten .thumb{background-image: url('../img/san-diego.jpg');}
 .eleven .thumb{background-image: url('../img/sunset-cliff.jpg');}
 .twelve .thumb{background-image: url('../img/zion.jpg');}
-/*----*/
+
 .card-content {
   padding: 0 .5em .7em .5em;
   display: flex;
   flex-direction: column;
-  align-items: center; /*-- vertically centers card content --*/
+  align-items: center;
 }
 .card-title {
   margin: 1rem 0 0 0;
-  text-transform: uppercase; /*--all caps text --*/
-  align-self: flex-start; /*-- positions at beginning --*/
-  color: var(--text);
+  align-self: center;
+  color: #010101;
 }
 .card-text {
   font-size: .80em;
   line-height: 1.2;
   align-self: flex-start;
-  color: var(--text);
+  color: #010101;
 }
 button.card-more {
   background: transparent;
@@ -234,41 +232,40 @@ button.card-more {
   text-transform: uppercase;
 }
 button.card-more, button.card-more:visited {
-  color: var(--prime);
-  border: 1.5px solid var(--prime);
+  color: #010101;
+  border: 1.5px solid #111;
   transition: all 250ms ease-in-out;
 }
 button.card-more:hover, button.card-more:active {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: #DEB887;
+  border-color: #DEB887;
 }
-/*-- Modal Styles --*/
-/* The Modal (background) */
+/*modal styles*/
 .modal {
-   display: none;/*-- hidden by default --*/
-   position: fixed; /*-- doesn't move on the screen --*/
-   z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
-   left: 0; /*-- positions at zero pixels from the left --*/
-   top: 0; /*-- positions at zero pixels from the top --*/
-   width: 100%; /*-- fills the space --*/
-   height: 100%; /*-- fills the space --*/
-   overflow: auto; /*-- handles overflow as normal. --*/
-   background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+   display: none;
+   position: fixed;
+   z-index: 1100;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(10, 10, 10, .4);
 }
 .modal-content {
-   background-color: var(--bg);
-   color: var(--text);
+   background-color: #f2f2f2;
+   color: #010101;
    margin: 1rem auto;
    padding: 1em;
    width: 92%;
    border-radius: 4px;
-   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+   animation: fadein .3s ease-in-out;
 }
 @keyframes fadein {
   from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
 }
 .close {
-   color: var(--text);
+   color: #111;
    font-size: 2.5em;
    font-weight: bold;
    position: absolute; /*-- always at the top right of the modal --*/
@@ -282,7 +279,7 @@ button.card-more:hover, button.card-more:active {
 }
 .close:hover,
 .close:focus {
-   color: var(--accent);
+   color: #DEB887;
    text-decoration: none;
    cursor: pointer;
 }
@@ -303,11 +300,11 @@ button.card-more:hover, button.card-more:active {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+@media screen and (min-width: 1280px) {
   .modal-body {grid-template-columns: 7fr 5fr;}
 
 }
-/*-- Footer Styles --*/
+/*footer styles*/
 footer {
   background-color: #30343F;
   padding: .25rem;
