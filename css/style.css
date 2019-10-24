@@ -18,7 +18,7 @@ i.fas {
 
 /*nav styles-*/
 .topnav {
-  margin-top: -.25rem; 
+  margin-top: -.25rem;
   padding-bottom: .5rem; /*-- creates a little space below nav --*/
   background-color: #30343F;
   display: flex; /*-- creates a flex container --*/
@@ -121,13 +121,7 @@ nav a.trigram {
   width: 100%; /*-- sets width equal to container width --*/
   text-align: center; /*-- aligns text center --*/
 }
-.numberof {
-  color: #f2f2f2; /*-- sets color to almost white --*/
-  font-size: 12px; /*-- sets font size --*/
-  padding: 8px 12px; /*-- sets numberof padding --*/
-  position: absolute; /*-- positions numberof text absolutely--*/
-  top: 0; /*-- sets position hard to the top--*/
-}
+
 .indicator {
   cursor:pointer; /*-- changes hover cursor to the hand --*/
   height: auto; /*-- sets height of pics --*/
