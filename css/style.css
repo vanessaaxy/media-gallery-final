@@ -35,7 +35,7 @@ nav a {
   text-align: center;
   padding: .75em;
   margin: auto 0;
-  color: var(--rev-text);
+  color: #f2f2f2;
   transition: color 250ms ease-in-out;
   text-decoration: none;
 }
@@ -308,12 +308,6 @@ button.card-more:hover, button.card-more:active {
 footer {
   background-color: #30343F;
   padding: .25rem;
-  color: var(--rev-text);
+  color: #f2f2f2;
   text-align: center;
-}
-footer a {
-  color: var(--rev-text);
-}
-footer a:hover {
-  color: var(--rev-accent);
 }
