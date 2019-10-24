@@ -12,14 +12,13 @@ body {
   line-height: 1.8;
   background-color: #ECE2D0;
 }
-i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
+i.fas {
   padding: 0 .33em;
 }
-/*------------------
---  Nav Styles  --
-------------------*/
-.topnav { /*-- main navigation element --*/
-  margin-top: -.25rem; /*-- uses negative margin to pull menu to top --*/
+
+/*nav styles-*/
+.topnav {
+  margin-top: -.25rem; 
   padding-bottom: .5rem; /*-- creates a little space below nav --*/
   background-color: #30343F;
   display: flex; /*-- creates a flex container --*/
