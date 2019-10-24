@@ -1,12 +1,12 @@
 // Page Scripts
-// Note: Function parameters are the names listed in the function definition, while function arguments are the real values passed to (and received by) the function.
+
 
 // Mobile Navigaton Toggle
-function navToggle() { // creates a new function named navToggle
-  var x = document.getElementById("main-nav"); // creates a variable set to #main-nav
-    if (x.className === "topnav") { // if #main-nav has a class of .topnav,
-    x.className += " responsive";   // then add a new class
-  } else {                          // if it doesn't,
+function navToggle() {
+  var x = document.getElementById("main-nav");
+    if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {                          
     x.className = "topnav";         // set class to .topnav
   } //closes if-else
 } //closes function
